@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const avSlice = createSlice({
   name: "av",
   initialState: [
-    {
+        {
         img: "https://pixabay.com/images/download/business-20031_640.jpg",
         name: "Projectors",
         cost: 200,
@@ -39,15 +39,17 @@ export const avSlice = createSlice({
 
   reducers: {
     incrementAvQuantity: (state, action) => {
-      const item = state[action.payload]
-      if (item) {
-        item.quantity++;
-      }
+        const item = state[action.payload]
+        if (item) {
+            item.quantity++;
+        }
     },
     decrementAvQuantity: (state, action) => {
         const item = state[action.payload]
         if (item && item.quantity > 0) {
-          item.quantity--;
+            item.quantity--;
+        }
+    },
   },
 });
 
